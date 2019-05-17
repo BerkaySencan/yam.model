@@ -1,4 +1,4 @@
-package tr.edu.izu.yam.core.entype;
+	package tr.edu.izu.yam.core.entype;
 
 import java.io.Serializable;
 
@@ -33,7 +33,7 @@ public class CoreEntityType implements Serializable{
 	
 	@Basic
 	@Column(name="owner_id",nullable=true)
-	private Long ownerId;
+	private long ownerId;
 	
 	@Basic
 	@Column(name="orderno",nullable=true)
@@ -44,7 +44,7 @@ public class CoreEntityType implements Serializable{
 	private String name;
 	
 	@Basic
-	@Column(name="status",length=1)
+	@Column(name="status",length=1,nullable=true)
 	private int status;
 	
 	@Basic
@@ -85,11 +85,11 @@ public class CoreEntityType implements Serializable{
 		this.className = className;
 	}
 
-	public Long getOwnerId() {
+	public long getOwnerId() {
 		return ownerId;
 	}
 
-	public void setOwnerId(Long ownerId) {
+	public void setOwnerId(long ownerId) {
 		this.ownerId = ownerId;
 	}
 
